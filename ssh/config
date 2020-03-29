@@ -1,0 +1,24 @@
+Host boson
+    HostName 198.125.161.151
+    User evan
+    ForwardX11 yes
+Host cx1
+    HostName login.cx1.hpc.imperial.ac.uk
+    User et3918
+Host cx2
+    HostName login.cx2.hpc.imperial.ac.uk
+    User et3918
+Host shah1
+    HostName shah-server1.lids.mit.edu
+    ProxyJump shahjump
+    User tey 
+Host shah2
+    HostName shah-server2.lids.mit.edu
+    ProxyJump shahjump
+    User tey 
+Host shahjump
+    HostName jump.lids.mit.edu
+    User tey
+Host nunet 
+    Hostname 18.18.109.40
+    User tey
