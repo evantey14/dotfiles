@@ -2,6 +2,7 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
     ~/.ssh/config:
         path: ssh/config
         create: true
@@ -12,4 +13,8 @@
         create: true
     ~/.i3status.conf: i3status.conf
 
+- create:
+    - ~/downloads
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,8 @@
+# Compiled source #
+###################
+*.pyc
+
+# Editing tools and IDEs #
+##########################
+[._]*.sw[a-p]
+.ipynb_checkpoints/
