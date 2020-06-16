@@ -12,6 +12,7 @@
         path: i3/
         create: true
     ~/.i3status.conf: i3status.conf
+    ~/.tmux.conf: tmux.conf
 
 - create:
     - ~/downloads
