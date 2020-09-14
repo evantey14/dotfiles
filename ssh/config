@@ -22,3 +22,6 @@ Host shahjump
 Host nunet 
     Hostname 18.18.109.40
     User tey
+Host hadron
+    HostName hadron.mit.edu
+    User tey
