@@ -18,10 +18,6 @@ alias ls="ls --ignore=Desktop --ignore='Dropbox (MIT)' --color=tty"
 alias mntusb="sudo mount /dev/sda1 /mnt"
 alias unmntusb="sudo umount /mnt"
 
-# Set default file openers
-alias -s pdf=firefox
-alias -s {png,jpg}=feh
-
 # Docker aliases
 alias dockrun="docker-compose exec server"
 alias dockman="docker-compose exec server python manage.py"
