@@ -15,6 +15,9 @@
     ~/.i3status.conf: i3status.conf
     ~/.tmux.conf: tmux.conf
     ~/.shell: shell/
+    ~/.vim/bundle/Vundle.vim:
+        path: Vundle.vim
+        create: true
 
 - create:
     - ~/downloads
