@@ -10,7 +10,7 @@ alias .....="cd ../../../.."
 alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
-alias path="echo -e ${PATH//:/\\n}"
+alias path="echo -e ${PATH//:/\\\\n}"
 
 alias ls="ls --ignore=Desktop --ignore='Dropbox (MIT)' --color=tty"
 
