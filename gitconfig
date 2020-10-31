@@ -34,6 +34,13 @@
 [merge]
     tool = vimdiff
 
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = auto
+
 [user]
     email = evantey14@gmail.com
     name = Evan Tey
