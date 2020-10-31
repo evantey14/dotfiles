@@ -20,8 +20,40 @@ Host shahjump
     HostName jump.lids.mit.edu
     User tey
 Host nunet 
-    Hostname 18.18.109.40
+    Hostname 18.4.134.42
     User tey
 Host hadron
     HostName hadron.mit.edu
     User tey
+
+# for ssh proxy access to hostess
+Host hostess hostess?
+  HostName %h.mit.edu
+  User tey
+
+# for ssh/scp/rsync access to pdo and poc machines
+Host pdo pdo? roci poc poc? pocdev? cali
+  HostName %h.mit.edu
+  ProxyCommand ssh -q -W %h:%p hostess
+  ForwardX11 yes
+  ForwardX11Trusted yes
+  ForwardAgent yes
+  User tey
+
+# for git access to the tetgit repositories
+Host tetgit
+  ProxyCommand ssh -q -W %h:%p hostess
+  ControlMaster auto
+  ControlPath /tmp/.ssh-%u->%r@%h
+  ControlPersist 15m
+  User tey
+
+# for https access via the SOCKS proxy
+Host hostess8080
+  HostName hostess.mit.edu
+  DynamicForward 8080
+  User tey
+
+Host tessscience
+  HostName tessscience.mit.edu
+  User tey
