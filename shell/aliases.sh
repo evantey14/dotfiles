@@ -36,8 +36,11 @@ alias reload="exec ${SHELL} -l"
 alias path="echo -e ${PATH//:/\\\\n}"
 
 # Listing
-alias ls="ls --ignore=Desktop --ignore='Dropbox (MIT)' --color=tty"
-alias la="ls -A"
+if which exa > /dev/null; then
+    alias ls="exa -lg"
+else
+    alias ls="ls -lh --color=tty"
+fi
 
 # Protect against overwriting
 alias cp="cp -i"
