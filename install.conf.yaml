@@ -20,7 +20,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.shell: shell/
     ~/.vim/bundle/Vundle.vim:
-        path: Vundle.vim
+        path: vim/Vundle.vim
         create: true
 
 - create:
