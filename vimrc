@@ -54,8 +54,8 @@ set lazyredraw
 
 " Plugin settings
 map <C-t> :NERDTreeToggle<CR>
-let g:ackprg = 'ag --nogroup --nocolor --column'
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+let g:ackprg = 'rg --no-heading --vimgrep'
 
 "---------------------
 " Local customizations
