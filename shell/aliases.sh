@@ -37,7 +37,7 @@ alias path="echo -e ${PATH//:/\\\\n}"
 
 # Listing
 if which exa > /dev/null; then
-    alias ls="exa -lg"
+    alias ls="exa -lg --git"
 else
     alias ls="ls -lh --color=tty"
 fi
