@@ -34,7 +34,7 @@ Host hostess hostess?
 # for ssh/scp/rsync access to pdo and poc machines
 Host pdo pdo? roci poc poc? pocdev? cali
   HostName %h.mit.edu
-  ProxyCommand ssh -q -W %h:%p hostess
+  ProxyCommand ssh -q -W %h:%p hostess2
   ForwardX11 yes
   ForwardX11Trusted yes
   ForwardAgent yes
@@ -42,7 +42,7 @@ Host pdo pdo? roci poc poc? pocdev? cali
 
 # for git access to the tetgit repositories
 Host tetgit
-  ProxyCommand ssh -q -W %h:%p hostess
+  ProxyCommand ssh -q -W %h:%p hostess2
   ControlMaster auto
   ControlPath /tmp/.ssh-%u->%r@%h
   ControlPersist 15m
@@ -50,10 +50,11 @@ Host tetgit
 
 # for https access via the SOCKS proxy
 Host hostess8080
-  HostName hostess.mit.edu
+  HostName hostess2.mit.edu
   DynamicForward 8080
   User tey
 
-Host tessscience
-  HostName tessscience.mit.edu
+Host tessscience, tapeworm
+  HostName %h.mit.edu
+  ForwardAgent yes
   User tey
