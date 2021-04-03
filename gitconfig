@@ -8,6 +8,7 @@
     di = diff
     dis = diff --stat
     diw = diff --color-words
+    dn = "!f() { git diff HEAD~$1 HEAD; }; f"
     dc = diff --cached
     dcs = diff --cached --stat
     dcw = diff --cached --color-words
