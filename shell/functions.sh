@@ -28,3 +28,9 @@ there="$HOME/.shell.here"
 there() {
     cd "$(readlink "${there}")"
 }
+
+pull() {
+    echo "Cleaning ~/pdo/$1"
+    rm -rf ~/pdo/$1
+    rsync -r pdo5:~/stage/$1 ~/pdo
+}
