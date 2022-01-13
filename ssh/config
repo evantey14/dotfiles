@@ -54,7 +54,7 @@ Host hostess8080
   DynamicForward 8080
   User tey
 
-Host tessscience, tapeworm
+Host tessscience tapeworm webtess
   HostName %h.mit.edu
   ForwardAgent yes
   User tey
