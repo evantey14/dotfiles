@@ -19,6 +19,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Set prompt. Based on gallois theme, but with host info.
+PROMPT=$'%{$fg[blue]%}<%n@%B%m%b%{$fg[blue]%}> %{$fg[green]%}[%~% ]%(?.%{$fg[yellow]%}.%{$fg[red]%}) %B$%b '
+
 export VISUAL="vim"
 
 # Vim navigation in menu completion
