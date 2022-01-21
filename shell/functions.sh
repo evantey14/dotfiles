@@ -34,3 +34,11 @@ pull() {
     rm -rf ~/pdo/$1
     rsync -r pdo5:~/stage/$1 ~/pdo
 }
+
+fcount() {
+    ls $@ | wc -l
+}
+
+lcount() {
+    wc -l $@
+}
