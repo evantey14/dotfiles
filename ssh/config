@@ -32,7 +32,7 @@ Host hostess hostess?
   User tey
 
 # for ssh/scp/rsync access to pdo and poc machines
-Host pdo pdo? roci poc poc? pocdev? cali
+Host pdo pdo? pdo5 roci poc poc? pocdev? cali
   HostName %h.mit.edu
   ProxyCommand ssh -q -W %h:%p hostess2
   ForwardX11 yes
@@ -54,7 +54,7 @@ Host hostess8080
   DynamicForward 8080
   User tey
 
-Host tessscience tapeworm webtess
+Host tessscience tapeworm webtess uzay
   HostName %h.mit.edu
   ForwardAgent yes
   User tey
