@@ -1,6 +1,4 @@
 # Easier navigation
-alias mit="cd ~/universe/mit"
-alias dls="cd ~/downloads"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -39,7 +37,7 @@ alias path="echo -e ${PATH//:/\\\\n}"
 if command -v exa &> /dev/null; then
     alias ls="exa -lg --git"
 else
-    alias ls="ls -lh --color=tty"
+    alias ls="ls -lh -G"
 fi
 
 # Protect against overwriting
@@ -72,3 +70,17 @@ alias unmntusb="sudo umount /mnt"
 # Docker aliases
 alias dockrun="docker-compose exec server"
 alias dockman="docker-compose exec server python manage.py"
+
+# Sequelize aliases
+ys() {
+  case $1 in
+    status)
+      command yarn sequelize db:migrate:status;;
+    migrate)
+      command yarn sequelize db:migrate;;
+    undo)
+      command yarn sequelize db:migrate:undo;;
+    *)
+      command yarn sequelize "$@";;
+  esac
+}
