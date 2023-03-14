@@ -22,6 +22,9 @@
     lg = log -p
     stage = add
     unstage = reset
+    brg = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do echo $branch ; done"
+    brgp = "!git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch ; done"
+    brd = branch -D
 
 [core]
     excludesfile = ~/.gitignore_global
@@ -37,6 +40,9 @@
 
 [pull]
     rebase = true
+
+[push]
+    autoSetupRemote = true
 
 [merge]
     tool = vimdiff
