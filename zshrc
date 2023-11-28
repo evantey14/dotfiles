@@ -6,7 +6,15 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="gallois"
+# Other candidates that I want to preserve:
+# ZSH_THEME_RANDOM_CANDIDATES=(
+#   "intheloop"
+#   "jispwoso"
+#   "itchy"
+#   "blinks"
+#   "juanghurtado"
+# )
+ZSH_THEME="intheloop"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -18,9 +26,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# Set prompt. Based on gallois theme, but with host info.
-PROMPT=$'%{$fg[blue]%}<%n@%B%m%b%{$fg[blue]%}> %{$fg[green]%}[%~% ]%(?.%{$fg[yellow]%}.%{$fg[red]%}) %B$%b '
 
 export VISUAL="vim"
 
