@@ -15,8 +15,9 @@
     dh = diff HEAD~
     dhs = diff HEAD~ --stat
     dhw = diff HEAD~ --color-words
-    gr = log --graph --format=line --date=relative --all --pretty=tformat:'%C(auto)%h %Cblue%><(9,trunc)%cl %Creset%<|(71,trunc)%s %Cgreen%ar %C(auto)%d'
-    gra = log --graph --format=detail --date=relative --all
+    gr = log --graph --format=line --date=relative --pretty=tformat:'%C(auto)%h %Cblue%><(11,trunc)%an %Creset%<|(75,trunc)%s %Cgreen%ar %C(auto)%d' main HEAD
+    gra = log --graph --format=line --all --date=relative --pretty=tformat:'%C(auto)%h %Cblue%><(11,trunc)%an %Creset%<|(75,trunc)%s %Cgreen%ar %C(auto)%d'
+    grs = log --graph --date=format:'%m-%d' --pretty=tformat:'%C(auto)%h %Cblue%<(8,trunc)%an %Creset%<|(60,trunc)%s %Cgreen%ad %C(auto)%d' HEAD main
     pu = pull --rebase --prune
     count = diff --stat "4b825dc642cb6eb9a060e54bf8d69288fbee4904" # hash of empty tree
     lg = log -p
