@@ -34,8 +34,8 @@ alias reload="exec ${SHELL} -l"
 alias path="echo -e ${PATH//:/\\\\n}"
 
 # Listing
-if command -v exa &> /dev/null; then
-    alias ls="exa -lg --git"
+if command -v eza &> /dev/null; then
+    alias ls="eza -lg --git"
 else
     alias ls="ls -lh -G"
 fi
