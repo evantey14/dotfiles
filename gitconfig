@@ -5,6 +5,7 @@
     ca = commit --amend -v
     co = checkout
     cob = checkout -b
+    cp = cherry-pick
     di = diff
     dis = diff --stat
     diw = diff --color-words
