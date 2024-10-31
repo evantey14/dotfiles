@@ -18,13 +18,11 @@
         create: true
     ~/.i3status.conf: i3status.conf
     ~/.tmux.conf: tmux.conf
+    ~/.wezterm.lua: wezterm.lua
     ~/.shell: shell/
     ~/.vim/bundle/Vundle.vim:
         path: vim/Vundle.vim
         create: true
-
-- create:
-    - ~/downloads
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
